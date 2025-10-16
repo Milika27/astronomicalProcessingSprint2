@@ -1,0 +1,48 @@
+﻿<Window x:Class="AstronomicalProcessing1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AstronomicalProcessing1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="480">
+    <Grid>
+        <!-- 2 rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- 2 columns -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- boxes on the right -->
+        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,5" Width="267">
+            <StackPanel Width="265" Height="511" RenderTransformOrigin="0.501,0.499">
+                <Button x:Name="btnDisplayData" Content="Display Data" Width="200" Height="40" FontSize="16" Click="btnDisplayData_Click"/>
+                <Button x:Name="btnSearch" Content="Search" Width="200" Height="40" FontSize="16" Click="btnSearch_Click"/>
+                <TextBox x:Name="txtSearch" Width="200" Height="40" />
+                <Button x:Name="btnEdit" Content="Edit" Width="200" Height="40" FontSize="16" Click="btnEdit_Click"/>
+                <TextBox x:Name="txtEdit" Width="200" Height="40"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- ListBox -->
+        <ListBox x:Name="lbxInput" Margin="29,25,36,35"/>
+
+        <!-- Status Bar -->
+        <StatusBar Grid.Row="2" Grid.ColumnSpan="3">
+
+            <StatusBarItem>
+                <TextBlock>System Status:</TextBlock>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="txtStatus"></TextBlock>
+            </StatusBarItem>
+
+        </StatusBar>
+
+    </Grid>
+</Window>
